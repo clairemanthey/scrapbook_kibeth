@@ -328,8 +328,8 @@ a{
     [heading02]
     auto
     [container0201]
-    minmax(0, auto)
-    
+      minmax(var(--verticalPadding), auto)
+
     [para0201-start]
       1.5rem
     [container0202-start]
@@ -366,17 +366,14 @@ a{
   grid-row: heading02;
   text-align: center;
   grid-column: 2 / -2;
-
-
 }
 
 .container_02-01{
   grid-row: container0201;
-
   grid-column: 2 / -2;
   width: 45%;
   min-width: 150px;
-  margin: 0 auto;
+  margin: 0 auto 5rem;
   border-radius: 30px;
   background-color: var(--padding-color);
   padding: 5px;
@@ -546,3 +543,218 @@ a{
 
 }
 
+/*--Scrapbook Page 3--*/
+
+.grid-03{
+    display: grid;
+  grid-template-columns: 5fr 3fr 2fr 5fr 1fr 4fr 4fr 1fr 5fr 2fr 3fr 5fr;
+  gap: 1rem;
+  --verticalPadding: 2rem;
+  --overlap: 6rem;
+  width: 90%;
+  grid-template-rows: 
+
+  [heading03]    
+      minmax(var(--verticalPadding), auto)
+  [container0301]
+  auto
+  2rem
+
+  [container0302-start]
+  1rem
+  [para0301-start]
+  minmax(var(--verticalPadding), auto)
+  [para0301-end]
+  minmax(var(--verticalPadding), auto)
+  [container0302-end]
+  auto
+  
+  [container0303-start]
+  9rem
+  [para0302-start]
+  auto
+  [container0303-end]
+  2rem
+  [container0304-start]
+  auto
+  [para0302-end]
+  auto
+  [contaienr0304-end]
+  2rem
+
+  ;
+
+  background-image: url(images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 5px solid black;
+  color: var(--font-color);
+  margin: 1.5rem auto 2rem;
+  padding: 0 0 5rem 0;
+}
+
+.heading_03{
+  grid-row: heading03;
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: var(--fs-900);
+}
+.container_03-01{
+  grid-row: container0301;
+  grid-column: 3 / -3;
+  padding: 5px;
+  background-color: var(--padding-color);
+  border-radius: 30px;
+}
+
+.image_daddy-01{
+  width: 100%;
+  border-radius: 30px;
+}
+
+.para_03-01{
+  grid-row: para0301;
+  grid-column: 2 / 8;
+  background-color: var(--padding-color);
+  color:var(--background-color);
+  font-size: var(--fs-500);
+  padding: 5px;
+}
+
+.container_03-02{
+  grid-row: container0302;
+  grid-column: 6 / 13;
+  background-color: var(--padding-color);
+  padding: 5px;
+}
+
+.image_daddy-02{
+  width: 100%;
+}
+
+.container_03-03{
+  grid-row: container0303;
+  grid-column: 2 / 10;
+  background-color: var(--padding-color);
+  padding: 5px;
+
+}
+
+.image_daddy-03{
+    width: 100%;
+}
+
+.para_03-02{
+  grid-row: para0302;
+  grid-column: 5 / 11;
+  background-color: var(--padding-color);
+  color:var(--background-color);
+  font-size: var(--fs-500);
+    padding: 5px;
+
+}
+
+.container_03-04{
+  grid-row: container0304;
+  grid-column: 4 / 12;
+  background-color: var(--padding-color);
+  padding: 5px;}
+
+.image_daddy-04{
+    width: 100%;
+}
+
+@media only screen and (min-width: 500px){
+  .grid-03{
+  grid-template-rows: 
+
+  [heading03]    
+      minmax(var(--verticalPadding), auto)
+  [container0301]
+  auto
+  2rem
+
+    [container0302-start]
+      1rem
+    [para0301-start]
+      minmax(var(--verticalPadding), auto)
+    [para0301-end]
+      minmax(var(--verticalPadding), auto)
+    [container0302-end]
+      auto
+  
+
+    [container0303-start]
+      minmax(var(--verticalPadding), auto)
+    [para0302-start]
+      2rem
+    [container0303-end]
+      2px
+    [container0304-start]
+      2px
+    [para0302-end]
+      2px
+    [contaienr0304-end]
+      2rem
+    ;
+  }
+  .para_03-01{
+    grid-row: para0301;
+    grid-column: 3 / 7;
+    background-color: var(--padding-color);
+    color:var(--background-color);
+    font-size: var(--fs-500);
+    padding: 5px;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .grid-03{
+  grid-template-rows: 
+
+  [heading03]    
+      minmax(var(--verticalPadding), auto)
+  [container0301]
+  auto
+  2rem
+
+    [container0302-start]
+      1rem
+    [para0301-start]
+      minmax(var(--verticalPadding), auto)
+    [para0301-end]
+      minmax(var(--verticalPadding), auto)
+    [container0302-end]
+      auto
+  
+
+    [container0303-start]
+      minmax(var(--verticalPadding), auto)
+    [para0302-start]
+      4rem
+    [container0303-end]
+      2px
+    [container0304-start]
+      2px
+    [para0302-end]
+      2px
+    [contaienr0304-end]
+      2rem
+    ;
+  }
+  .para_03-01{
+    grid-column: 3 / 8;
+    font-size: var(--fs-700);
+  }
+
+  .para_03-02{
+    font-size: var(--fs-700);
+  }
+}
+
+@media only screen and (min-width: 900px){
+    .para_03-01{
+    grid-column: 3 / 7;
+  }
+}
